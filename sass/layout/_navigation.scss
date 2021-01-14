@@ -2,7 +2,7 @@
 * @Author: Gavin
 * @Date:   2021-01-13 17:42:29
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-14 02:58:31
+* @Last Modified time: 2021-01-14 14:53:00
 */
 
 
@@ -23,8 +23,18 @@
 
         &-mobile {
             display: block;
-            z-index: 20;
+            z-index: 999;
         }
+    }
+
+    @media screen and (max-width: 31.25em) {
+    	position: fixed;
+    	background-color: white;
+    	margin-left: 0;
+    	margin-right: 0;
+    	width: 100%;
+    	padding-left: 3rem;
+    	padding-right: 3rem;
     }
 
     &__logo {
@@ -89,7 +99,7 @@
 
     &__burger {
         display: none;
-        z-index: 20;
+        z-index: 999;
 
         @media screen and (max-width: 31.25em) {
             display: block;

@@ -66,7 +66,7 @@ body {
 * @Author: Gavin
 * @Date:   2021-01-13 17:42:29
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-14 02:58:31
+* @Last Modified time: 2021-01-14 14:53:00
 */
 .navbar {
   display: flex;
@@ -82,7 +82,16 @@ body {
       margin-right: 3rem; }
       .navbar-mobile {
         display: block;
-        z-index: 20; } }
+        z-index: 999; } }
+  @media screen and (max-width: 31.25em) {
+    .navbar {
+      position: fixed;
+      background-color: white;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+      padding-left: 3rem;
+      padding-right: 3rem; } }
   .navbar__logo {
     height: 11vh; }
   .navbar ul {
@@ -125,7 +134,7 @@ body {
     display: none; }
   .navbar__burger {
     display: none;
-    z-index: 20; }
+    z-index: 999; }
     @media screen and (max-width: 31.25em) {
       .navbar__burger {
         display: block; } }
@@ -166,7 +175,7 @@ body {
 * @Author: Gavin
 * @Date:   2021-01-13 19:42:43
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-14 01:41:50
+* @Last Modified time: 2021-01-14 14:38:18
 */
 .section-story {
   min-height: 50rem;
