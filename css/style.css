@@ -2,7 +2,13 @@
 * @Author: Gavin
 * @Date:   2021-01-13 15:24:26
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-13 15:35:39
+* @Last Modified time: 2021-01-13 19:42:55
+*/
+/*
+* @Author: Gavin
+* @Date:   2021-01-13 18:16:34
+* @Last Modified by:   Gavin
+* @Last Modified time: 2021-01-13 20:32:56
 */
 /*
 * @Author: Gavin
@@ -22,3 +28,98 @@ html {
 
 body {
   box-sizing: border-box; }
+
+/*
+* @Author: Gavin
+* @Date:   2021-01-13 18:23:37
+* @Last Modified by:   Gavin
+* @Last Modified time: 2021-01-13 20:45:32
+*/
+body {
+  font-family: 'Raleway', sans-serif; }
+
+/*
+* @Author: Gavin
+* @Date:   2021-01-13 17:48:50
+* @Last Modified by:   Gavin
+* @Last Modified time: 2021-01-13 20:39:02
+*/
+.header__image {
+  height: 88vh;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0.4)), url(../../images/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .header__image-text {
+    color: #fff;
+    font-size: 6rem;
+    width: 80rem;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 2s ease; }
+
+/*
+* @Author: Gavin
+* @Date:   2021-01-13 17:42:29
+* @Last Modified by:   Gavin
+* @Last Modified time: 2021-01-13 19:41:36
+*/
+.navbar {
+  display: flex;
+  min-height: 12vh;
+  align-items: center;
+  justify-content: center; }
+  .navbar__logo {
+    height: 11vh; }
+  .navbar ul {
+    width: 80%;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2rem; }
+    .navbar ul a:link,
+    .navbar ul a:visited {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #f2af58;
+      font-weight: 700;
+      transition: all 1s; }
+    .navbar ul a:hover {
+      border-bottom: 0.2rem solid #f2af58; }
+
+/*
+* @Author: Gavin
+* @Date:   2021-01-13 19:42:43
+* @Last Modified by:   Gavin
+* @Last Modified time: 2021-01-13 20:30:09
+*/
+.section-story {
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 25% repeat(2, minmax(25rem, 1fr)) 1fr;
+  font-size: 1.6rem;
+  align-items: center; }
+  .section-story-part1 {
+    padding: 3rem;
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 33rem; }
+    .section-story-part1-bold {
+      font-size: 3rem;
+      font-weight: 700; }
+  .section-story-part2 {
+    padding: 3rem;
+    grid-column: 3 / 4;
+    width: 100%; }
+    .section-story-part2 img {
+      border-radius: 5rem;
+      height: 33rem;
+      mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.8));
+      -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.8)); }

@@ -1,0 +1,40 @@
+/*
+* @Author: Gavin
+* @Date:   2021-01-13 17:42:29
+* @Last Modified by:   Gavin
+* @Last Modified time: 2021-01-13 19:41:36
+*/
+
+
+.navbar {
+	display: flex;
+	min-height: 12vh;
+	align-items: center;
+	justify-content: center;
+
+	&__logo {
+		height: 11vh;
+	}
+
+	ul {
+		width: 80%;
+		display: flex;
+		list-style: none;
+		justify-content: space-around;
+		align-items: center;
+		font-size: 2rem;
+
+		a:link,
+		a:visited {
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $color-primary;
+			font-weight: 700;
+			transition: all 1s;
+		}
+
+		a:hover {
+			border-bottom: .2rem solid $color-primary;
+		}
+	}
+}
