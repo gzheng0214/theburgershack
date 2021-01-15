@@ -2,13 +2,16 @@
 * @Author: Gavin
 * @Date:   2021-01-13 15:24:26
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-14 18:58:43
+* @Last Modified time: 2021-01-15 16:30:22
 */
 
-@import "abstracts/utilities";
-@import "abstracts/variables";
-@import "base/base";
-@import "base/typography";
-@import "layout/header";
-@import "layout/navigation";
-@import "pages/home";
+@import "base";
+@import "variables";
+@import "typography";
+
+@import "header";
+@import "story";
+@import "menu";
+@import "navigation";
+@import "utilities";
+@import "typography";
