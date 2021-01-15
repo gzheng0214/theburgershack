@@ -2,7 +2,7 @@
 * @Author: Gavin
 * @Date:   2021-01-13 17:42:29
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-14 14:53:00
+* @Last Modified time: 2021-01-14 15:10:29
 */
 
 
@@ -66,7 +66,7 @@
             opacity: 0;
             transform: translateY(-100%);
             transition: transform 0.5s ease-in;
-            z-index: 10;
+            z-index: 900;
             position: fixed;
 
             li {

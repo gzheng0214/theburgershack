@@ -2,7 +2,7 @@
 * @Author: Gavin
 * @Date:   2021-01-13 17:48:50
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-14 01:11:06
+* @Last Modified time: 2021-01-14 19:29:58
 */
 .header {
 	&__image {
@@ -14,6 +14,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		@media screen and (max-width: 31.25em) {
+			height: 100vh;
+		}
 
 		&-text {
 			color: $white;
