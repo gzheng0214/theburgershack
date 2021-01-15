@@ -2,7 +2,7 @@
  * @Author: Gavin
  * @Date:   2021-01-13 20:36:28
  * @Last Modified by:   Gavin
- * @Last Modified time: 2021-01-14 14:38:27
+ * @Last Modified time: 2021-01-15 03:39:32
  */
 
 // TEXT FADES IN HEADER
@@ -25,7 +25,6 @@ document.querySelector('.navbar__checkbox').addEventListener('click', function()
                 item.style.animation = `fadeIn 0.5s ease forwards ${i / 4 + .1}s`;
         });
     } else {
-        active = false;
         document.body.style.overflow = '';
         document.getElementsByTagName('ul')[0].style.transform = "";
         document.getElementsByTagName('ul')[0].style.opacity = "";
@@ -34,6 +33,19 @@ document.querySelector('.navbar__checkbox').addEventListener('click', function()
                 item.style.animation = '';
         });
     }
+});
+
+document.querySelectorAll('.navbar ul li a').forEach(a => {
+    a.addEventListener('click', function(e) {
+        document.querySelector('.navbar__checkbox').checked = false;
+        document.body.style.overflow = '';
+        document.getElementsByTagName('ul')[0].style.transform = "";
+        document.getElementsByTagName('ul')[0].style.opacity = "";
+        document.querySelectorAll('.navbar ul li').forEach((item, i) => {
+            if (i != 2)
+                item.style.animation = '';
+        });
+    });
 });
 
 // Resetting hamburger nav bar when user resizes past width of 501px
