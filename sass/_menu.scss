@@ -2,9 +2,36 @@
 * @Author: Gavin
 * @Date:   2021-01-15 16:25:43
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-15 16:31:01
+* @Last Modified time: 2021-01-15 22:39:59
 */
 
 .section-menu {
-	height: 100vh;
+	background-color: $color-gray;
+	padding: 12rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&-title {
+		font-size: 5rem;
+		margin-bottom: 10rem;
+		color: $color-primary;
+	}
+
+	&-options {
+		display: flex;
+		justify-content: center;
+		width: 60%;
+		li {
+			cursor: pointer;
+			list-style: none;
+			font-size: 2rem;
+			padding: 0 3rem 2rem 3rem;
+			border-bottom: .1rem solid $color-primary;
+		}
+	}
+}
+
+.active {
+	border-bottom: .2rem solid $color-primary-dark !important;
 }

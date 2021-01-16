@@ -2,7 +2,7 @@
 * @Author: Gavin
 * @Date:   2021-01-13 17:42:29
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-15 17:31:24
+* @Last Modified time: 2021-01-15 23:15:15
 */
 
 
@@ -12,6 +12,10 @@
     align-items: center;
     justify-content: center;
     z-index: 900;
+    transition: min-height .5s;
+    position: fixed;
+    background-color: $white;
+    width: 100%;
 
     &-mobile {
         display: none;
@@ -19,8 +23,8 @@
 
     @media screen and (max-width: 43.75em) {
         justify-content: space-between;
-        margin-left: 3rem;
-        margin-right: 3rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
 
         &-mobile {
             display: block;
@@ -29,13 +33,6 @@
     }
 
     @media screen and (max-width: 31.25em) {
-    	position: fixed;
-    	background-color: white;
-    	margin-left: 0;
-    	margin-right: 0;
-    	width: 100%;
-    	padding-left: 3rem;
-    	padding-right: 3rem;
         box-shadow: 0 .1rem .5rem rgba(0,0,0,.1);
     }
 

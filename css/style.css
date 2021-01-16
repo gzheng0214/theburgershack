@@ -2,7 +2,7 @@
 * @Author: Gavin
 * @Date:   2021-01-13 15:24:26
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-15 16:30:22
+* @Last Modified time: 2021-01-15 23:17:55
 */
 /*
 * @Author: Gavin
@@ -27,7 +27,7 @@ body {
 * @Author: Gavin
 * @Date:   2021-01-13 18:16:34
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-14 18:59:59
+* @Last Modified time: 2021-01-15 22:14:14
 */
 /*
 * @Author: Gavin
@@ -42,10 +42,10 @@ body {
 * @Author: Gavin
 * @Date:   2021-01-13 17:48:50
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-15 16:28:09
+* @Last Modified time: 2021-01-15 22:58:39
 */
 .header__image {
-  height: 88vh;
+  height: 100vh;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/header.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,7 +53,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  position: relative; }
   @media screen and (max-width: 31.25em) {
     .header__image {
       height: 100vh; } }
@@ -111,7 +112,7 @@ body {
 * @Author: Gavin
 * @Date:   2021-01-13 19:42:43
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-14 19:38:33
+* @Last Modified time: 2021-01-15 23:17:30
 */
 .section-story {
   display: grid;
@@ -153,14 +154,16 @@ body {
         padding: 3rem 8vw; } }
     .section-story__text--biggest {
       font-size: 5rem;
-      color: #f2af58; }
+      color: #f2af58;
+      margin-bottom: 3rem; }
       @media screen and (max-width: 50em) {
         .section-story__text--biggest {
           font-size: 3.5rem; } }
     .section-story__text--big {
       font-size: 2.5rem;
       color: #d47f10;
-      font-style: italic; }
+      font-style: italic;
+      margin-bottom: 2rem; }
       @media screen and (max-width: 50em) {
         .section-story__text--big {
           font-size: 2rem; } }
@@ -175,42 +178,60 @@ body {
 * @Author: Gavin
 * @Date:   2021-01-15 16:25:43
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-15 16:31:01
+* @Last Modified time: 2021-01-15 22:39:59
 */
 .section-menu {
-  height: 100vh; }
+  background-color: #fafafa;
+  padding: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .section-menu-title {
+    font-size: 5rem;
+    margin-bottom: 10rem;
+    color: #f2af58; }
+  .section-menu-options {
+    display: flex;
+    justify-content: center;
+    width: 60%; }
+    .section-menu-options li {
+      cursor: pointer;
+      list-style: none;
+      font-size: 2rem;
+      padding: 0 3rem 2rem 3rem;
+      border-bottom: 0.1rem solid #f2af58; }
+
+.active {
+  border-bottom: 0.2rem solid #d47f10 !important; }
 
 /*
 * @Author: Gavin
 * @Date:   2021-01-13 17:42:29
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-15 17:31:24
+* @Last Modified time: 2021-01-15 23:15:15
 */
 .navbar {
   display: flex;
   min-height: 12vh;
   align-items: center;
   justify-content: center;
-  z-index: 900; }
+  z-index: 900;
+  transition: min-height .5s;
+  position: fixed;
+  background-color: #fff;
+  width: 100%; }
   .navbar-mobile {
     display: none; }
   @media screen and (max-width: 43.75em) {
     .navbar {
       justify-content: space-between;
-      margin-left: 3rem;
-      margin-right: 3rem; }
+      padding-left: 3rem;
+      padding-right: 3rem; }
       .navbar-mobile {
         display: block;
         z-index: 999; } }
   @media screen and (max-width: 31.25em) {
     .navbar {
-      position: fixed;
-      background-color: white;
-      margin-left: 0;
-      margin-right: 0;
-      width: 100%;
-      padding-left: 3rem;
-      padding-right: 3rem;
       box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.1); } }
   .navbar__logo {
     height: 11vh; }
@@ -291,24 +312,6 @@ body {
   to {
     opacity: 1;
     transform: translateX(0); } }
-
-/*
-* @Author: Gavin
-* @Date:   2021-01-14 18:58:19
-* @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-14 18:58:22
-*/
-.mb-sm {
-  margin-bottom: 2rem; }
-
-.mb-md {
-  margin-bottom: 3rem; }
-
-.mb-lg {
-  margin-bottom: 4rem; }
-
-.mb-hg {
-  margin-bottom: 8rem; }
 
 /*
 * @Author: Gavin

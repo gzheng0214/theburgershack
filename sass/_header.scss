@@ -2,11 +2,11 @@
 * @Author: Gavin
 * @Date:   2021-01-13 17:48:50
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-15 16:28:09
+* @Last Modified time: 2021-01-15 22:58:39
 */
 .header {
     &__image {
-        height: 88vh;
+        height: 100vh;
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/header.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -15,6 +15,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        position: relative;
 
         @media screen and (max-width: 31.25em) {
             height: 100vh;
