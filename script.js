@@ -2,7 +2,7 @@
  * @Author: Gavin
  * @Date:   2021-01-13 20:36:28
  * @Last Modified by:   Gavin
- * @Last Modified time: 2021-01-15 23:14:45
+ * @Last Modified time: 2021-01-16 16:18:26
  */
 
 
@@ -83,7 +83,7 @@ document.querySelector('.navbar').addEventListener('click', function(e) {
         }
         const sectionCoords = section.getBoundingClientRect();
         const navbarCoords = document.querySelector('.navbar').getBoundingClientRect();
-        const heightDiff = window.pageYOffset !== 0 ? 0 :  .04 * window.innerHeight; // height difference between navbar before it's shrunk
+        const heightDiff = window.pageYOffset !== 0 ? 0 : .04 * window.innerHeight; // height difference between navbar before it's shrunk
 
         window.scrollTo({
             left: sectionCoords.left + window.pageXOffset,
@@ -97,6 +97,7 @@ document.querySelector('.navbar').addEventListener('click', function(e) {
 window.addEventListener('scroll', function(e) {
     const navbar = document.querySelector('.navbar');
     if (window.innerWidth <= 500) {
+        navbar.style.minHeight = '12vh';
         return;
     }
     if (window.pageYOffset !== 0) {
@@ -127,7 +128,7 @@ window.matchMedia("(min-width: 501px)").addListener((x) => {
 document.querySelector('.header__image-arrow').addEventListener('click', function() {
     const sectionCoords = document.getElementById('#story').getBoundingClientRect();
     const navbarCoords = document.querySelector('.navbar').getBoundingClientRect();
-    const heightDiff = window.pageYOffset !== 0 ? 0 :  .04 * window.innerHeight;
+    const heightDiff = window.pageYOffset !== 0 ? 0 : .04 * window.innerHeight;
     window.scrollTo({
         left: sectionCoords.left + window.pageXOffset,
         top: sectionCoords.top - navbarCoords.height + heightDiff + window.pageYOffset,
@@ -136,13 +137,16 @@ document.querySelector('.header__image-arrow').addEventListener('click', functio
 });
 
 // MENU 
-document.querySelector('.section-menu-options').addEventListener('click', function(e){
+document.querySelector('.section-menu-options').addEventListener('click', function(e) {
     const options = document.querySelectorAll('.section-menu-options li');
-    options.forEach(option => {
+    const optionMenu = document.querySelectorAll('.section-menu-option li');
+    options.forEach((option, index) => {
         if (option != e.target) {
-            option.classList.remove('active');
+            option.classList.remove('section-menu-options--active');
+            optionMenu[index].classList.add('section-menu-option--hidden');
         } else {
-            option.classList.add('active');
+            option.classList.add('section-menu-options--active');
+            optionMenu[index].classList.remove('section-menu-option--hidden');
         }
     });
 });

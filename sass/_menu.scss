@@ -2,36 +2,91 @@
 * @Author: Gavin
 * @Date:   2021-01-15 16:25:43
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-15 22:39:59
+* @Last Modified time: 2021-01-16 16:09:07
 */
 
 .section-menu {
-	background-color: $color-gray;
-	padding: 12rem;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    background-color: $color-gray;
+    padding: 8rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-	&-title {
-		font-size: 5rem;
-		margin-bottom: 10rem;
-		color: $color-primary;
-	}
+    &-title {
+        font-size: 5rem;
+        margin-bottom: 6rem;
+        color: $color-primary;
 
-	&-options {
-		display: flex;
-		justify-content: center;
-		width: 60%;
-		li {
-			cursor: pointer;
-			list-style: none;
-			font-size: 2rem;
-			padding: 0 3rem 2rem 3rem;
-			border-bottom: .1rem solid $color-primary;
-		}
-	}
-}
+        @media screen and (max-width: 50em) {
+            font-size: 3.5rem;
+        }
+    }
 
-.active {
-	border-bottom: .2rem solid $color-primary-dark !important;
+    &-options {
+        display: flex;
+        justify-content: center;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        li {
+            cursor: pointer;
+            list-style: none;
+            font-size: 2rem;
+            padding: 0 3rem 2rem 3rem;
+            border-bottom: .1rem solid $color-primary;
+
+            @media screen and (max-width: 31.25em) {
+                padding: 0 1rem 2rem 1rem;
+                font-size: 1.8rem;
+            }
+
+            @media screen and (max-width: 20em) {
+                font-size: 1.6rem;
+            }
+        }
+
+        &--active {
+            border-bottom: .2rem solid $color-primary-dark !important;
+        }
+    }
+
+    &-option {
+        list-style: none;
+        margin-top: 5rem;
+        width: 50rem;
+
+        @media screen and (max-width: 37.5em) {
+            width: 45rem;
+        }
+
+        @media screen and (max-width: 31.25em) {
+            width: 30rem;
+        }
+
+        @media screen and (max-width: 20em) {
+            width: 26rem;
+        }
+
+        &-item {
+            padding: 2rem;
+        }
+
+        &-item:not(:last-child) {
+            padding: 2rem;
+            border-bottom: .2rem dotted $color-primary;
+        }
+
+        &--bold {
+            color: $color-primary;
+            font-size: 2rem;
+        }
+
+        &--light {
+            font-size: 1.5rem;
+        }
+
+        &--hidden {
+            display: none;
+        }
+    }
 }

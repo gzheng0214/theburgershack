@@ -178,37 +178,72 @@ body {
 * @Author: Gavin
 * @Date:   2021-01-15 16:25:43
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-15 22:39:59
+* @Last Modified time: 2021-01-16 16:09:07
 */
 .section-menu {
   background-color: #fafafa;
-  padding: 12rem;
+  padding: 8rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center; }
   .section-menu-title {
     font-size: 5rem;
-    margin-bottom: 10rem;
+    margin-bottom: 6rem;
     color: #f2af58; }
+    @media screen and (max-width: 50em) {
+      .section-menu-title {
+        font-size: 3.5rem; } }
   .section-menu-options {
     display: flex;
     justify-content: center;
-    width: 60%; }
+    font-weight: 500;
+    text-transform: uppercase; }
     .section-menu-options li {
       cursor: pointer;
       list-style: none;
       font-size: 2rem;
       padding: 0 3rem 2rem 3rem;
       border-bottom: 0.1rem solid #f2af58; }
-
-.active {
-  border-bottom: 0.2rem solid #d47f10 !important; }
+      @media screen and (max-width: 31.25em) {
+        .section-menu-options li {
+          padding: 0 1rem 2rem 1rem;
+          font-size: 1.8rem; } }
+      @media screen and (max-width: 20em) {
+        .section-menu-options li {
+          font-size: 1.6rem; } }
+    .section-menu-options--active {
+      border-bottom: 0.2rem solid #d47f10 !important; }
+  .section-menu-option {
+    list-style: none;
+    margin-top: 5rem;
+    width: 50rem; }
+    @media screen and (max-width: 37.5em) {
+      .section-menu-option {
+        width: 45rem; } }
+    @media screen and (max-width: 31.25em) {
+      .section-menu-option {
+        width: 30rem; } }
+    @media screen and (max-width: 20em) {
+      .section-menu-option {
+        width: 26rem; } }
+    .section-menu-option-item {
+      padding: 2rem; }
+    .section-menu-option-item:not(:last-child) {
+      padding: 2rem;
+      border-bottom: 0.2rem dotted #f2af58; }
+    .section-menu-option--bold {
+      color: #f2af58;
+      font-size: 2rem; }
+    .section-menu-option--light {
+      font-size: 1.5rem; }
+    .section-menu-option--hidden {
+      display: none; }
 
 /*
 * @Author: Gavin
 * @Date:   2021-01-13 17:42:29
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-15 23:15:15
+* @Last Modified time: 2021-01-16 15:03:59
 */
 .navbar {
   display: flex;
