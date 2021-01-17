@@ -2,7 +2,7 @@
 * @Author: Gavin
 * @Date:   2021-01-13 15:24:26
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-16 16:51:38
+* @Last Modified time: 2021-01-16 23:56:21
 */
 /*
 * @Author: Gavin
@@ -45,6 +45,72 @@ body {
   @media screen and (max-width: 50em) {
     .bold {
       font-size: 3.5rem; } }
+
+/*
+* @Author: Gavin
+* @Date:   2021-01-16 23:55:59
+* @Last Modified by:   Gavin
+* @Last Modified time: 2021-01-17 01:51:35
+*/
+.footer {
+  width: 100%;
+  background-color: #f2af58;
+  display: flex;
+  align-items: center;
+  padding: 3rem 15rem;
+  justify-content: space-around; }
+  @media screen and (max-width: 62.5em) {
+    .footer {
+      padding: 3rem 8rem; } }
+  @media screen and (max-width: 50em) {
+    .footer {
+      padding: 3rem 2rem; } }
+  @media screen and (max-width: 31.25em) {
+    .footer {
+      flex-direction: column; } }
+  .footer-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.6; }
+    .footer-text--big {
+      font-size: 5rem; }
+      @media screen and (max-width: 50em) {
+        .footer-text--big {
+          font-size: 3.5rem; } }
+    .footer-text--small {
+      font-size: 3rem; }
+      @media screen and (max-width: 50em) {
+        .footer-text--small {
+          font-size: 2.5rem; } }
+    @media screen and (max-width: 31.25em) {
+      .footer-text {
+        margin-bottom: 2rem; } }
+  .footer__social-logo {
+    font-size: 3rem;
+    color: #000;
+    cursor: pointer;
+    padding-right: 3rem; }
+    .footer__social-logo:hover {
+      color: #fff; }
+
+#mapid {
+  height: 35rem;
+  width: 35rem;
+  z-index: 1; }
+  @media screen and (max-width: 50em) {
+    #mapid {
+      height: 30rem;
+      width: 30rem; } }
+  @media screen and (max-width: 37.5em) {
+    #mapid {
+      height: 22rem;
+      width: 22rem; } }
+  @media screen and (max-width: 31.25em) {
+    #mapid {
+      order: 1;
+      height: 30rem;
+      width: 30rem; } }
 
 /*
 * @Author: Gavin

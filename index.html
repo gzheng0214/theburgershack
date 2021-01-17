@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <script defer src="https://kit.fontawesome.com/12cfd793ea.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="icon" type="image/png" href="./images/logo.png">
     <script defer type="text/javascript" src="script.js"></script>
@@ -26,7 +29,7 @@
                     <a href="#menu" aria-label="Menu section">Menu</a>
                 </li>
                 <li>
-                    <a href="#" aria-label="Logo">
+                    <a href="" aria-label="Logo">
                         <img src="images/logo.png" class="navbar__logo" alt="Logo">
                     </a>
                 </li>
@@ -34,7 +37,7 @@
                     <a href="#gallery" aria-label="Gallery section">Gallery</a>
                 </li>
                 <li>
-                    <a href="#" aria-label="Contact section">Contact</a>
+                    <a href="#contact" aria-label="Contact section">Contact</a>
                 </li>
             </ul>
             <div class="navbar__burger">
@@ -109,11 +112,11 @@
             <li class="section-menu-option--hidden">
                 <div class="section-menu-option-item">
                     <h2 class="section-menu-option--bold">Soda</h2>
-                    <p class="section-menu-option--light">Coke, Sprite, Fanta, Dr Pepper, Mountain Dew</p>
+                    <p class="section-menu-option--light">Coke, Sprite, Fanta, Dr Pepper, Mountain Dew.</p>
                 </div>
                 <div class="section-menu-option-item">
                     <h2 class="section-menu-option--bold">Iced Tea</h2>
-                    <p class="section-menu-option--light">Homemade iced tea, brewed fresh daily</p>
+                    <p class="section-menu-option--light">Homemade iced tea, brewed fresh daily.</p>
                 </div>
                 <div class="section-menu-option-item">
                     <h2 class="section-menu-option--bold">Tropical Smoothie</h2>
@@ -141,9 +144,25 @@
         </div>
         <div class="section-gallery__overlay" style="display: none">
             <a class="section-gallery__overlay-button section-gallery__overlay--close" aria-label="Close overlay">x</a>
-            <a class="section-gallery__overlay-button section-gallery__overlay--prev" aria-label="Previous image"><</a>
-            <a class="section-gallery__overlay-button section-gallery__overlay--next" aria-label="Previous image">></a>
+            <a class="section-gallery__overlay-button section-gallery__overlay--prev" aria-label="Previous image">
+                <</a> <a class="section-gallery__overlay-button section-gallery__overlay--next" aria-label="Next image">>
+            </a>
         </div>
     </section>
+    <footer class="footer" id="contact">
+        <div id="mapid"></div>
+        <div class="footer-text">
+            <h1 class="footer-text--big">Contact Us</h1> <br>
+            <p class="footer-text--small">
+                215 Murray Street<br>
+                New York, NY 10282 <br>
+                (123) 456-7890 <br>
+                <a class="footer__social-logo" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a class="footer__social-logo" aria-label="Facebook"><i class="fab fa-facebook-square"></i></a>
+                <a class="footer__social-logo" aria-label="Yelp"><i class="fab fa-yelp"></i></a>
+            </p>
+        </div>
+    </footer>
 </body>
+
 </html>

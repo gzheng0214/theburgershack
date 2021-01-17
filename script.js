@@ -2,7 +2,7 @@
  * @Author: Gavin
  * @Date:   2021-01-13 20:36:28
  * @Last Modified by:   Gavin
- * @Last Modified time: 2021-01-16 19:19:16
+ * @Last Modified time: 2021-01-17 01:51:07
  */
 
 
@@ -202,3 +202,15 @@ document.querySelector('.section-gallery__overlay').addEventListener('click', fu
         }
     }
 });
+
+// FOOTER
+
+// LEAFLETJS map
+const mymap = L.map('mapid').setView([40.7152774, -74.0148106], 16);
+
+L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(mymap);
+
+const marker = L.marker([40.7152774, -74.0148106]).addTo(mymap);
+marker.bindPopup("<b>The Shack Burger</b><br>215 Murray Street, New York, NY 10282").openPopup();
