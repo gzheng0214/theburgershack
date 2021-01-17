@@ -2,7 +2,7 @@
  * @Author: Gavin
  * @Date:   2021-01-13 20:36:28
  * @Last Modified by:   Gavin
- * @Last Modified time: 2021-01-16 19:08:50
+ * @Last Modified time: 2021-01-16 19:19:16
  */
 
 
@@ -23,6 +23,7 @@ window.addEventListener('load', function() {
 
 // MOBILE HAMBURGER BUTTON TOGGLE
 document.querySelector('.navbar__checkbox').addEventListener('click', function() {
+    console.log(1);
     const checkbox = document.querySelector('.navbar__checkbox');
     const navItems = document.querySelectorAll('.navbar ul li');
 
@@ -77,8 +78,8 @@ window.matchMedia("(min-width: 501px)").addListener(noScroll);
 
 // SMOOTH SCROLL
 document.querySelector('.navbar').addEventListener('click', function(e) {
-    e.preventDefault();
     if (e.target.localName === 'a') { // Makes sure the user is clicking on a nav link
+        e.preventDefault();
         const section = document.getElementById(e.target.hash.slice(1)); // Get the section the user wants to scroll to
         if (!section) {
             return;
@@ -178,7 +179,7 @@ document.querySelector('.section-gallery__overlay').addEventListener('click', fu
     if (e.target === document.querySelector('.section-gallery__overlay--close')) {
         return;
     }
-    const width = window.InnerWidth;
+    const width = window.innerWidth;
     const image = document.querySelector('.section-gallery__overlay img');
     const imageList = document.querySelectorAll('.section-gallery__container img');
     const imagesSrc = [...document.querySelectorAll('.section-gallery__container img')].map(img => img.src);
