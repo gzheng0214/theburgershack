@@ -50,7 +50,7 @@ body {
 * @Author: Gavin
 * @Date:   2021-01-16 23:55:59
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-17 01:51:35
+* @Last Modified time: 2021-01-17 01:59:56
 */
 .footer {
   width: 100%;
@@ -67,7 +67,7 @@ body {
       padding: 3rem 2rem; } }
   @media screen and (max-width: 31.25em) {
     .footer {
-      flex-direction: column; } }
+      flex-direction: column-reverse; } }
   .footer-text {
     display: flex;
     flex-direction: column;
@@ -108,9 +108,12 @@ body {
       width: 22rem; } }
   @media screen and (max-width: 31.25em) {
     #mapid {
-      order: 1;
       height: 30rem;
       width: 30rem; } }
+  @media screen and (max-width: 20em) {
+    #mapid {
+      height: 22rem;
+      width: 22rem; } }
 
 /*
 * @Author: Gavin

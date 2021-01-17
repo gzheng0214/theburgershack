@@ -2,7 +2,7 @@
 * @Author: Gavin
 * @Date:   2021-01-16 23:55:59
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-17 01:51:35
+* @Last Modified time: 2021-01-17 01:59:56
 */
 
 .footer {
@@ -22,7 +22,7 @@
     }
 
     @media screen and (max-width: 31.25em) {
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     &-text {
@@ -80,8 +80,13 @@
     }
 
     @media screen and (max-width: 31.25em) {
-        order: 1;
         height: 30rem;
         width: 30rem;
     }
+
+    @media screen and (max-width: 20em) {
+    	height: 22rem;
+    	width: 22rem;
+    }
+
 }
