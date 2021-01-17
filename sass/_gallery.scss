@@ -1,0 +1,86 @@
+/*
+* @Author: Gavin
+* @Date:   2021-01-16 16:49:20
+* @Last Modified by:   Gavin
+* @Last Modified time: 2021-01-16 18:30:23
+*/
+.section-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem 2rem;
+
+    &__container {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(3, 30vw);
+        grid-template-rows: repeat(3, 30vw);
+        width: 80%;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: transform .2s;
+            cursor: pointer;
+
+            &:hover {
+                filter: blur(.1rem) brightness(80%);
+            }
+        }
+    }
+
+    &__overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, .8);
+
+        img {
+            height: 60%;
+
+            @media screen and (max-width: 56.25em) {
+                height: 48%;
+            }
+
+
+            @media screen and (max-width: 31.25em) {
+                height: 40%;
+            }
+
+            @media screen and (max-width: 28.125em) {
+                height: 30%;
+            }
+        }
+
+        &-button {
+            color: $white;
+            font-size: 3rem;
+            cursor: pointer;
+            position: absolute;
+
+            &:hover {
+                color: darken($white, 30%);
+            }
+        }
+
+        &--close {
+            top: 5rem;
+            right: 5rem;
+        }
+
+        &--prev {
+            top: 50%;
+            left: 5rem;
+        }
+
+        &--next {
+            top: 50%;
+            right: 5rem;
+        }
+    }
+}

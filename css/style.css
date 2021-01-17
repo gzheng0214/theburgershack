@@ -2,7 +2,7 @@
 * @Author: Gavin
 * @Date:   2021-01-13 15:24:26
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-15 23:17:55
+* @Last Modified time: 2021-01-16 16:51:38
 */
 /*
 * @Author: Gavin
@@ -33,10 +33,80 @@ body {
 * @Author: Gavin
 * @Date:   2021-01-13 18:23:37
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-13 20:45:32
+* @Last Modified time: 2021-01-16 16:50:13
 */
 body {
   font-family: 'Raleway', sans-serif; }
+
+.bold {
+  font-size: 5rem;
+  margin-bottom: 6rem;
+  color: #f2af58; }
+  @media screen and (max-width: 50em) {
+    .bold {
+      font-size: 3.5rem; } }
+
+/*
+* @Author: Gavin
+* @Date:   2021-01-16 16:49:20
+* @Last Modified by:   Gavin
+* @Last Modified time: 2021-01-16 18:30:23
+*/
+.section-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 2rem; }
+  .section-gallery__container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 30vw);
+    grid-template-rows: repeat(3, 30vw);
+    width: 80%; }
+    .section-gallery__container img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      transition: transform .2s;
+      cursor: pointer; }
+      .section-gallery__container img:hover {
+        filter: blur(0.1rem) brightness(80%); }
+  .section-gallery__overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8); }
+    .section-gallery__overlay img {
+      height: 60%; }
+      @media screen and (max-width: 56.25em) {
+        .section-gallery__overlay img {
+          height: 48%; } }
+      @media screen and (max-width: 31.25em) {
+        .section-gallery__overlay img {
+          height: 40%; } }
+      @media screen and (max-width: 28.125em) {
+        .section-gallery__overlay img {
+          height: 30%; } }
+    .section-gallery__overlay-button {
+      color: #fff;
+      font-size: 3rem;
+      cursor: pointer;
+      position: absolute; }
+      .section-gallery__overlay-button:hover {
+        color: #b3b3b3; }
+    .section-gallery__overlay--close {
+      top: 5rem;
+      right: 5rem; }
+    .section-gallery__overlay--prev {
+      top: 50%;
+      left: 5rem; }
+    .section-gallery__overlay--next {
+      top: 50%;
+      right: 5rem; }
 
 /*
 * @Author: Gavin
@@ -178,7 +248,7 @@ body {
 * @Author: Gavin
 * @Date:   2021-01-15 16:25:43
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-16 16:09:07
+* @Last Modified time: 2021-01-16 16:49:53
 */
 .section-menu {
   background-color: #fafafa;
@@ -186,13 +256,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; }
-  .section-menu-title {
-    font-size: 5rem;
-    margin-bottom: 6rem;
-    color: #f2af58; }
-    @media screen and (max-width: 50em) {
-      .section-menu-title {
-        font-size: 3.5rem; } }
   .section-menu-options {
     display: flex;
     justify-content: center;
@@ -352,7 +415,15 @@ body {
 * @Author: Gavin
 * @Date:   2021-01-13 18:23:37
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-13 20:45:32
+* @Last Modified time: 2021-01-16 16:50:13
 */
 body {
   font-family: 'Raleway', sans-serif; }
+
+.bold {
+  font-size: 5rem;
+  margin-bottom: 6rem;
+  color: #f2af58; }
+  @media screen and (max-width: 50em) {
+    .bold {
+      font-size: 3.5rem; } }

@@ -2,7 +2,7 @@
  * @Author: Gavin
  * @Date:   2021-01-13 20:36:28
  * @Last Modified by:   Gavin
- * @Last Modified time: 2021-01-16 16:18:26
+ * @Last Modified time: 2021-01-16 19:08:50
  */
 
 
@@ -63,7 +63,8 @@ document.querySelectorAll('.navbar ul li a').forEach(a => {
 function noScroll(x) {
     if (x.matches) {
         document.querySelector('.navbar__checkbox').checked = false;
-        document.body.style.overflow = '';
+        if (!document.querySelector('.section-gallery__overlay').contains(document.querySelector('.section-gallery__overlay').getElementsByTagName('img')[0]))
+            document.body.style.overflow = '';
         document.getElementsByTagName('ul')[0].style.transform = "";
         document.getElementsByTagName('ul')[0].style.opacity = "";
         document.querySelectorAll('.navbar ul li').forEach((item, i) => {
@@ -76,8 +77,9 @@ window.matchMedia("(min-width: 501px)").addListener(noScroll);
 
 // SMOOTH SCROLL
 document.querySelector('.navbar').addEventListener('click', function(e) {
+    e.preventDefault();
     if (e.target.localName === 'a') { // Makes sure the user is clicking on a nav link
-        const section = document.getElementById(e.target.hash); // Get the section the user wants to scroll to
+        const section = document.getElementById(e.target.hash.slice(1)); // Get the section the user wants to scroll to
         if (!section) {
             return;
         }
@@ -124,9 +126,9 @@ window.matchMedia("(min-width: 501px)").addListener((x) => {
     }
 });
 
-// 
+// Scroll when clicking on down arrow in the header
 document.querySelector('.header__image-arrow').addEventListener('click', function() {
-    const sectionCoords = document.getElementById('#story').getBoundingClientRect();
+    const sectionCoords = document.getElementById('story').getBoundingClientRect();
     const navbarCoords = document.querySelector('.navbar').getBoundingClientRect();
     const heightDiff = window.pageYOffset !== 0 ? 0 : .04 * window.innerHeight;
     window.scrollTo({
@@ -149,4 +151,53 @@ document.querySelector('.section-menu-options').addEventListener('click', functi
             optionMenu[index].classList.remove('section-menu-option--hidden');
         }
     });
+});
+
+// GALLERY
+
+// OPENS OVERLAY
+document.querySelector('.section-gallery__container').addEventListener('click', function(e) {
+    const imgSrc = e.target.getAttribute('src');
+    const imgAlt = e.target.getAttribute('alt');
+    document.querySelector('.section-gallery__overlay').style.display = 'flex';
+    document.querySelector('.navbar').style.display = 'none';
+    document.body.style.overflow = 'hidden';
+    document.querySelector('.section-gallery__overlay').insertAdjacentHTML('afterbegin', `<img src="${imgSrc}" alt="${imgAlt}">`);
+});
+
+// CLOSES OVERLAY
+document.querySelector('.section-gallery__overlay--close').addEventListener('click', function() {
+    document.querySelector('.section-gallery__overlay').removeChild(document.querySelector('.section-gallery__overlay').childNodes[0]);
+    document.querySelector('.section-gallery__overlay').style.display = 'none';
+    document.querySelector('.navbar').style.display = 'flex';
+    document.body.style.overflow = '';
+});
+
+// CHANGE IMAGE IN THE OVERLAY
+document.querySelector('.section-gallery__overlay').addEventListener('click', function(e) {
+    if (e.target === document.querySelector('.section-gallery__overlay--close')) {
+        return;
+    }
+    const width = window.InnerWidth;
+    const image = document.querySelector('.section-gallery__overlay img');
+    const imageList = document.querySelectorAll('.section-gallery__container img');
+    const imagesSrc = [...document.querySelectorAll('.section-gallery__container img')].map(img => img.src);
+    const currentImgNum = imagesSrc.indexOf(image.src);
+    if (e.clientX < width / 2) { // user clicked on left side of the page so that means user wants to go to previous image
+        if (currentImgNum === 0) {
+            image.src = imageList[8].src;
+            image.alt = imageList[8].alt;
+        } else {
+            image.src = imageList[currentImgNum - 1].src;
+            image.alt = imageList[currentImgNum - 1].alt;
+        }
+    } else { // next image
+        if (currentImgNum === 8) {
+            image.src = imageList[0].src;
+            image.alt = imageList[0].alt;
+        } else {
+            image.src = imageList[currentImgNum + 1].src;
+            image.alt = imageList[currentImgNum + 1].alt;
+        }
+    }
 });
