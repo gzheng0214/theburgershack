@@ -119,7 +119,7 @@ body {
 * @Author: Gavin
 * @Date:   2021-01-16 16:49:20
 * @Last Modified by:   Gavin
-* @Last Modified time: 2021-01-16 18:30:23
+* @Last Modified time: 2021-01-17 02:07:20
 */
 .section-gallery {
   display: flex;
@@ -148,7 +148,8 @@ body {
     top: 0;
     height: 100vh;
     width: 100vw;
-    background-color: rgba(0, 0, 0, 0.8); }
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999; }
     .section-gallery__overlay img {
       height: 60%; }
       @media screen and (max-width: 56.25em) {
